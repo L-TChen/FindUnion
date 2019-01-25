@@ -14,9 +14,9 @@ The worst-case time complexity of `union` and `find` in `Data.Union.ST` is
 page for details.
 
 In addition, it provides a pure interface in `Data.Union` with a creation operation
-
-    buildDS :: (Ix i) => Bound i -> [(i, i)] -> Union i [i]
-
+```haskell
+buildDS :: (Ix i) => Bound i -> [(i, i)] -> Union i [i]
+```
 which takes the range of elements and a list of pairs of the same set and
 produces a table to check if any two elements are of the same set using
 `connected`. This operation constructs the table within the ST monad and
@@ -27,9 +27,9 @@ practically linear, where *n* is the length of range and the time complexity of
 takes *O(n)* steps in Haskell. 
 
 Alternatively, you can also use 
-
-    fromList :: (Ix i) => (i, i) -> [[i]] -> Union i [i]
-
+```haskell
+fromList :: (Ix i) => (i, i) -> [[i]] -> Union i [i]
+```
 to construct a table to look up which takes, again, the range of elements and a
 list of lists (instead of pairs) of the same set. Any missing element is
 regarded as a singleton set. 

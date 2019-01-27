@@ -4,7 +4,7 @@ cabal-version:       2.4
 
 name:                FindUnion
 version:             0.1.0.0
-synopsis:            An implementation of Tarjan's Union-Find algorithm using STArray to construct disjoint sets internally.
+synopsis:            An implementation of Tarjan's Union-Find algorithm using STArray.
 -- description:
 -- bug-reports:
 license:             MIT
